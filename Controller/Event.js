@@ -1,12 +1,8 @@
-const eventToken = require("../modals/TokenSchema");
+const Event = require("../modals/EventSchema");
 
-const EventLogin = async (req, resp) => {
-  const tokenVal = req.params.token;
-  const [...data] = await eventToken.find({ token: tokenVal });
-  const filterData = data.filter(
-    (auth) => parseInt(tokenVal, 10) === auth.token,
-  );
-  resp.status(200).json(filterData);
+const AllEvent = async (req, resp) => {
+  const eventList = await Event.find({});
+  resp.status(200).json(eventList);
 };
 
-module.exports = EventLogin;
+module.exports = AllEvent;
