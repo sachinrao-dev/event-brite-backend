@@ -5,7 +5,6 @@ const AllEvent = require("../Controller/insertData");
 const deleteData = require("../Controller/DeleteEvent");
 const getList = require("../Controller/UpdateEvent");
 const updatedEventInfo = require("../Controller/UpdatedEventInfo");
-// const Error = require("../middleware/ErrorHandler");
 
 const router = express.Router();
 router.route("/login/:token").get(EventLogin);

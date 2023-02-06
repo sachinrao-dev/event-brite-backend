@@ -11,13 +11,11 @@ const CreateEventSchema = mongoose.Schema({
   },
   start_date: {
     type: Date,
-    default: Date.now(),
-
+    required: true,
   },
   end_date: {
     type: Date,
-    default: Date.now(),
-
+    required: true,
   },
   capacity: {
     type: Number,
